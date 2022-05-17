@@ -1,8 +1,8 @@
 # Cloud Info
 Header header 
 
-int32[] startRingIndex
-int32[] endRingIndex
+int32[] startRingIndex # 每一根水平扫描线 可用于计算曲率的点的起始索引
+int32[] endRingIndex # 每一根水平扫描线 可用于计算曲率的点的终止索引
 
 int32[]  pointColInd # point column index in range image
 float32[] pointRange # point range 
@@ -16,6 +16,7 @@ float32 imuPitchInit
 float32 imuYawInit
 
 # Initial guess from imu pre-integration
+# 在imageProjection中，是预积分odom提供的点云起始时刻的位姿
 float32 initialGuessX
 float32 initialGuessY
 float32 initialGuessZ
